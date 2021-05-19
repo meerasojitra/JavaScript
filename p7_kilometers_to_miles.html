@@ -7,18 +7,27 @@
 </head>
 <body>
     <h2>Convert Kilometers to Miles</h2>
-    <input type="number" id="km" placeholder="Enter value of Kilometers">
-    <button onclick="miles()">Convert into miles</button></br></br>
-    <p id="mile"></p>
-    
+    <input type="number" id="km" onkeyup= "kmTomiles()" placeholder="Enter value of Kilometers">
+	<input type="number" id="mile" onkeyup= "milesTokm()" placeholder="Enter value of Miles">
+	
+      
 </body>
 <script>
-    function miles(){
-        var km, miles;
+ function kmTomiles(){
+	 var ml, miles;
+			var diff = 1.609;
+			km = document.getElementById('km').value;
+			ml = km*diff;
+			document.getElementById('mile').value= ml;
+			
+		}
+  
+    function milesTokm(){
+        var km, ml;
         var diff = 0.621371;
-        km = document.getElementById('km').value;
-        miles = km * diff;
-        document.getElementById('mile').innerHTML = +km + '&nbsp;'+ 'kilometers is equal to' +'&nbsp;'+'<strong>'+ miles +'</strong>';
+        ml = document.getElementById('mile').value;
+        km = ml * diff;
+        document.getElementById('km').value= km;
     }
 </script>
 </html>
