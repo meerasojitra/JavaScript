@@ -1,0 +1,35 @@
+<!--JavaScript Program to Find LCM-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LCM</title>
+</head>
+<body>
+<h2>Find LCM</h2>
+  
+    <input type="number" id="no1" value="" placeholder="Enter first number">
+    <input type="number" id="no2" value="" placeholder="Enter second number">
+ 
+    <button type="button" onclick="lcm()">LCM</button>
+    <p id="result"></p>
+    </form>
+</body>
+<script>
+function lcm(){
+    var no1, no2,i, hcf,lcm;
+   
+    no1= document.getElementById('no1').value;
+    no2= document.getElementById('no2').value;
+  
+    for (i = 1; i <= no1 && i <= no2; i++) {
+        if( no1 % i == 0 && no2 % i == 0) {
+            hcf = i;
+        }
+    }
+    lcm = (no1 * no2) / hcf;
+    document.getElementById('result').innerHTML = 'LCM of '+no1 + ' and '+ no2 +'is: ' +lcm;
+    }
+
+</script>
+</html>

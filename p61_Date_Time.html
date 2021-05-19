@@ -1,0 +1,20 @@
+<!--JavaScript Program to Display Date and Time-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Date and Time</title>
+</head>
+<body>
+    <h2>Display Date and Time</h2>
+</body>
+<script>
+    var today = new Date();
+    const d = today.toDateString();
+
+    document.write(today +'<br>');
+    document.write('Date is: '+d + '<br>');
+
+    const time = today.toLocaleTimeString();
+    document.write('Time is:' +time);
+</script>
+</html>

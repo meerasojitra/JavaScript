@@ -1,0 +1,49 @@
+<!--JavaScript Program to Make a Simple Calculator-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Calculator</title>
+</head>
+<body>
+    <h2>Simple Calculator</h2>
+    
+    <input type="text" id="a" value="" placeholder="Enter a">
+    <input type="text" id="b" value="" placeholder="Enter b"><br/><br/>
+   
+    <button type="button" id="add" onclick="add()">+</button>
+    <button type="button" id="sub" onclick="sub()">-</button>
+    <button type="button" id="mult" onclick="mult()">*</button>
+    <button type="button" id="div" onclick="div()">/</button>
+
+    <p id="result"></p>
+  
+</body>
+<script>
+    function add(){
+        var a=  parseInt(document.getElementById('a').value);
+        var b = parseInt(document.getElementById('b').value);
+        var c = a + b;
+        document.getElementById('result').innerHTML = "Answer is " +c;
+      
+    }
+    function sub(){
+        var a=  parseInt(document.getElementById('a').value);
+        var b = parseInt(document.getElementById('b').value);
+        var c = a - b;
+        document.getElementById('result').innerHTML = "Answer is " +c;
+    }
+    function mult(){
+        var a=  parseInt(document.getElementById('a').value);
+        var b = parseInt(document.getElementById('b').value);
+        var c = a * b;
+        document.getElementById('result').innerHTML = "Answer is " +c;
+    }
+    function div(){
+        var a=  parseInt(document.getElementById('a').value);
+        var b = parseInt(document.getElementById('b').value);
+        var c = a / b;
+        document.getElementById('result').innerHTML = "Answer is " +c;
+    }
+</script>
+</html>

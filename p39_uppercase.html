@@ -1,0 +1,30 @@
+<!--JavaScript Program to Convert the First Letter of a String into UpperCase-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>UpperCase</title>
+</head>
+<body>
+    <h2>Convert the First Letter of a String into UpperCase</h2>
+    <input type="text" id="st" value="" placeholder="Enter a character:">
+    <button type="button" onclick="convert()">To Uppercase</button> 
+    <br>
+    <p id="result"></p>
+    <p id="result2"></p>
+
+</body>
+<script>
+    function convert(){
+        var st;
+        st= document.getElementById('st').value;
+        const capitalized = st.toUpperCase()
+        console.log('Uppercase String:' + ' ' + capitalized);
+        document.getElementById('result').innerHTML = "Convert First Letter of a String into Uppercase : " +capitalized;
+   
+        const capitalized2 = st.charAt(0).toUpperCase() + st.slice(1);
+        document.getElementById('result2').innerHTML = "Convert First Letter of a String into Uppercase : " +capitalized2;
+
+    }
+ 
+</script>
+</html>

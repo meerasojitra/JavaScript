@@ -1,0 +1,25 @@
+<!--JavaScript Program to Find the Square Root-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SquareRoot</title>
+</head>
+<body>
+    <h2>Square Root</h2>
+    <form>
+    <input type="number" id="no" value="" placeholder="Enter any No">
+
+    <button type="button" id="sqrt" onclick="squareRoot()">Answer</button>
+
+    <!--the square root of--is- line print-->
+    <p id="result"></p>
+    </form>
+</body>
+<script>
+    function squareRoot(){
+        const  no = parseInt(document.getElementById('no').value);
+        document.getElementById('result').innerHTML =Math.sqrt(no);
+    }
+</script>
+</html>

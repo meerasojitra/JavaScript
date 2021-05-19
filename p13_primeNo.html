@@ -1,0 +1,37 @@
+<!--JavaScript Program to Check Prime Number-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>Prime number</title>
+</head>
+<body>
+    <h2>Prime numbe</h2>
+    <input type="number" id="no" value="" placeholder="Enter any number">
+  
+    <button type="button" id="prime" onclick="primeNumner()">Prime value or not?</button>
+    <p id="result"></p>
+
+</body>
+<script>
+function primeNumner(){
+    var a,i,n, flag = true;
+
+    a = document.getElementById('no').value;
+  
+    for(i = 2; i <= n - 1; i++){
+        if (n % i == 0) {
+            flag = false;
+            break;
+     }
+    }
+     if (flag == true){
+        document.getElementById('result').innerHTML= +a +" Number is Prime:" 
+     }
+     else{
+        document.getElementById('result').innerHTML= +a +" Number is NOT prime value" 
+     }
+   
+}
+</script>
+</html>

@@ -1,0 +1,26 @@
+<!--JavaScript Program to Add Two Numbers-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Addition of two no</title>
+</head>
+<body>
+    <h2>Addition of 2 numbers</h2>
+    <form>
+    <input type="text" id="a" value="" placeholder="Enter a">
+    <input type="text" id="b" value="" placeholder="Enter b">
+   
+    <button type="button" id="add" onclick="add()">Answer</button>
+
+    <p id="result"></p>
+    </form>
+</body>
+<script>
+    function add(){
+        document.getElementById('result').innerHTML =
+         parseInt(document.getElementById('a').value) +
+         parseInt(document.getElementById('b').value) ;
+    }
+</script>
+</html>

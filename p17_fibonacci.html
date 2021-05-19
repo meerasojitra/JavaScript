@@ -1,0 +1,33 @@
+<!--JavaScript Program to Print the Fibonacci Sequence-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Fibonacci Sequence</title>
+</head>
+<body>
+    <h2>Fibonacci Sequence</h2>
+    <input type="number" id ="no" placeholder="Enter the number of terms:">
+    <button type="button" id="fact" onclick="fibonacci()">get Fibonacci Series</button>
+    <p id="no1"></p>
+    <p id="result"></p>
+    
+</body>
+<script>
+    function fibonacci(){
+        var no, sum, i=0;
+        var no1=0;
+        var no2=1;
+        no = document.getElementById('no').value;
+       
+        for (i = 0; i<=no; i++) 
+        {
+            console.log(" <br> " +  no1);
+            sum=no1+no2;
+            no1=no2;
+            no2=sum;
+        }
+              
+        document.getElementById('result').innerHTML= " The sum of Fibonacci Series :" +no2 ;
+    }   
+</script>
+</html>

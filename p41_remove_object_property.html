@@ -1,0 +1,27 @@
+<!--JavaScript Program to Remove a Property from an Object-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Object</title>
+</head>
+<body>
+    <h2> Javascript Objects:-Remove a Property</h2>
+</body>
+<script>
+    var student ={
+        name:"Meera",
+        age:26,
+        hobbies:['reading','dance','music','craft'],
+        known_language:['English','Hindi','Gujrati'],
+        marks:{
+            maths:90,
+            English:99,
+            Science:92
+        }
+    };
+
+    console.log(student);
+    delete student['marks'];
+    console.log(student);
+</script>
+</html>

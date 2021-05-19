@@ -1,0 +1,42 @@
+<!--Javascript Program to Generate a Random Number-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Random Number</title>
+</head>
+<body>
+    <h2> Random Number</h2>
+    <input type="number" id="min" placeholder="Enter Minimum value">
+    <input type="number" id="max" placeholder="Enter Maximum value">
+
+    <button onclick="randomNumber()">get Random Number</button></br></br>
+    <p id="random"></p>
+    <p id ="floor"></p>
+    <p id="ceil"></p>
+    <p id="trunc"></p>
+    <p id="round"></p>
+
+</body>
+<script>
+    function randomNumber(){
+        var min =  document.getElementById('min').value;
+        var max =  document.getElementById('max').value;
+        var rno = Math.random() * (max - min) + min;
+
+        //var rno = Math.floor(Math.random() * (max - min + 1)) + min;
+
+        var rno2 = Math.floor(rno) ;
+        var rno3 =  Math.ceil(rno);
+        var rno4=  Math.trunc(rno);
+        var rno5 =Math.round(rno);
+        
+    document.getElementById('random').innerHTML = 'Random number between '+ min +' and ' + max +' is: '+ '<strong>' +'&nbsp;'+ rno +'</strong>'
+    document.getElementById('floor').innerHTML = '<b>Floor</b> value of ' + rno + 'is:' +'&nbsp;'+ rno2 +'</strong>'
+    document.getElementById('ceil').innerHTML ='<b>ceil</b> value of ' + rno + 'is:' +'&nbsp;'+ rno3 +'</strong>'
+    document.getElementById('trunc').innerHTML ='<b>truncate</b> value of ' + rno + 'is:' +'&nbsp;'+ rno4 +'</strong>' 
+    document.getElementById('round').innerHTML ='<b>round</b> value of ' + rno + 'is:' +'&nbsp;'+ rno5 +'</strong>' 
+ 
+}
+</script>
+</html>

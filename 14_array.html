@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <title>Array---</title>
+</head>
+<body>
+    <h2>Javascript Arrays</h2>
+    <p id="array"></p>
+    <p id="length"></p>
+    <p id="first"></p>
+    <p id="last"></p>
+    <h3>Using looping array elements display array in table form <br/></h3>
+        <p id ="ftable"></p>
+    
+    <h3> Using Array.forEach() function <br/></h3>
+        <p id ="foreach"></p>
+
+        <h3>Adding Array Elements using push() method
+        <button onclick="fruitPush()">Add more</button> </h3>
+    <p id="fpush"></p>
+
+    <script>
+        var fruits, fLen, last, text, fLen, i;
+        fruits=["Apple","grapes","Pineapple","blackberry","Orange"];
+        document.getElementById("array").innerHTML=fruits;
+
+        //dispaly length
+        fLen = fruits.length;
+        document.getElementById("length").innerHTML="<p><strong>length of fruits array:</strong></p>" +fLen;
+
+        //acsess first elemnet
+        document.getElementById("first").innerHTML = fruits[0];
+
+        //access last elemnet
+        last = fruits[fruits.length-1];
+        document.getElementById("last").innerHTML = "<p><b>last element:</b></p>"+last;
+
+        //Looping Array Elements
+            //display in table form
+        text = "<table border='1'>";
+        for (i = 0; i < fLen; i++) {
+        text += "<tr><td>" + fruits[i] + "</td></tr>";
+        }
+        text += "</table>";
+        document.getElementById("ftable").innerHTML = text;
+       
+        /* display in ordered list
+        text = "<ul>";
+        for (i = 0; i < fLen; i++) {
+        text += "<li>" + fruits[i] + "</li>";
+        }
+        text += "</ul>";
+        document.getElementById("ftable").innerHTML = text; */
+
+        //forEach 
+
+        text = "<ul>";
+        fruits.forEach(myFunction);
+        text += "</ul>";
+        document.getElementById("foreach").innerHTML = text;
+
+        function myFunction(value) {
+        text += "<li>" + value + "</li>";
+        }
+
+        function fruitPush(){
+            fruits.push("Lemon");
+            document.getElementById("fpush").innerHTML = fruits;
+        }
+
+
+        
+
+
+    </script>
+    
+</body>
+
+
+</html>

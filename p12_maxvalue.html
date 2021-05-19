@@ -1,0 +1,29 @@
+<!--JavaScript Program to Find the Largest Among Three Numbers-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>Largest value</title>
+</head>
+<body>
+    <h2>largest Value</h2>
+    <input type="number" id="a" value="" placeholder="Enter first number">
+    <input type="number" id="b" value="" placeholder="Enter second number">
+    <input type="number" id="c" value="" placeholder="Enter third number">
+
+    <button type="button" id="checkno" onclick="maxValue()">maximum value</button>
+    <p id= "result"></p>
+
+</body>
+<script>
+function maxValue(){
+    var a,b,c,maximum;
+    a = document.getElementById('a').value;
+    b = document.getElementById('b').value;
+    c = document.getElementById('c').value;
+
+    maximum = Math.max(a,b,c);
+    document.getElementById('result').innerHTML= "The maximum value is:" +maximum;    
+}
+</script>
+</html>

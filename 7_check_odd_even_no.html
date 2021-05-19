@@ -1,0 +1,28 @@
+<!--no is odd or even-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <title>Document</title>
+</head>
+<body>
+
+        <input type="number" id="no" value="" placeholder="Enter Any Number">
+        <button type="button" id="checkno" onclick="checkOddEven()">Check No Is Odd Or Even</button>
+        <p id= "result"></p>
+   
+</body>
+<script>
+    function checkOddEven(){
+        var no= document.getElementById('no').value;
+        if(no%2==0){
+            document.getElementById('result').innerHTML = no +'no is even';
+        }
+        else{
+            document.getElementById('result').innerHTML = no +'no is odd';
+
+        }
+    }
+</script>
+</html>

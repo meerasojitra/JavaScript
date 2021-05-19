@@ -1,0 +1,29 @@
+<!--print even no where n user input -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Even no</title>
+</head>
+<body>
+    <h2>Print Even no where n is user Inpur value</h2>
+    <form>
+        <input type="number" id="n" value="" placeholder="Enter n value" />
+        <input type="button" onclick="printEvenNos()" value="Print Even Numbers" />
+        <div id="result"></div>
+    </form>
+</body>
+<script>
+   
+function printEvenNos(){
+    var n = parseInt(document.getElementById("n").value);
+    var evenNo = "<br>Even Numbers:<br>";
+        for(var i=1;i<=n;i++){
+            if(i % 2 == 0){
+            evenNo += i + "<br>";
+          }
+          document.getElementById("result").innerHTML = evenNo;
+    }
+}
+</script>
+</html>

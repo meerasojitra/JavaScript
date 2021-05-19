@@ -1,0 +1,28 @@
+<!--print n value  where n user input-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>number</title>
+</head>
+<body>
+    <form>
+        <input type="number" id="n" value="" placeholder="Enter n value" />
+        <input type="button" onclick="printEvenNums()" value="Print Numbers" />
+        <div id="result"></div>
+    </form>
+</body>
+<script>
+   
+function printEvenNums(){
+    var n = parseInt(document.getElementById("n").value);
+    var value = "<br>Print n value:<br>";
+        for(var i=1;i<=n;i++){
+           
+            value += i + "<br>";
+          }
+          document.getElementById("result").innerHTML = value;
+    }
+
+</script>
+</html>

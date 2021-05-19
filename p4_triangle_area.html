@@ -1,0 +1,29 @@
+<!--JavaScript Program to Calculate the Area of a Triangle-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Area of a Triangle</title>
+</head>
+<body>
+    <h2>Area of a Triangle</h2>
+    <form>
+        <input type="text" id="b" value="" placeholder="Enter base Value"><br/><br/>
+        <input type="text" id="h" value="" placeholder="Enter height"><br/><br/>
+    
+        <button type="button" id="triangle" onclick="triangleArea()">Area</button>
+
+        <p id="result"></p>
+    </form>
+</body>
+<script>
+    function triangleArea(){
+        
+        var b = parseInt(document.getElementById('b').value);
+        var h = parseInt(document.getElementById('h').value);
+        var area = (b*h)/2;
+        document.getElementById('result').innerHTML = 'Area of Triangle is:' + area;
+
+    }
+</script>
+</html>

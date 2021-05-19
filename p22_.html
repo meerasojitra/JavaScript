@@ -1,0 +1,40 @@
+<!--JavaScript Program to Check if the Numbers Have Same Last Digit-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>check numbers</title>
+</head>
+<body>
+<h2>The Numbers Have Same Last Digit or not?</h2>
+  
+    <input type="number" id="no" value="" placeholder="Enter first number">
+    <input type="number" id="no2" value="" placeholder="Enter second number">
+    <input type="number" id="no3" value="" placeholder="Enter third number">
+
+    <button type="button" onclick="checkNo()">Check</button>
+    <p id="result"></p>
+    </form>
+</body>
+<script>
+function checkNo(){
+    var no, no2, no3;
+    var r1,r2,r3;
+    no= document.getElementById('no').value;
+    no2= document.getElementById('no2').value;
+    no3= document.getElementById('no3').value;
+
+    r1 = no % 10;
+    r2 = no2 % 10;
+    r3 = no3 % 10;
+
+    if(r1 == r2 && r1 == r3) {
+    document.getElementById('result').innerHTML = no +','+ no2 +'and'+ no3 +'have the same last digit.'
+    }
+    else {
+    document.getElementById('result').innerHTML = no +',' + no2 +'and'+ no3 +'have different last digit.'
+     }
+
+}
+</script>
+</html>

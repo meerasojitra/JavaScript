@@ -1,0 +1,29 @@
+<!--JavaScript Program to Find the Sum of Natural Numbers-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  
+    <title>Addition of Natural Numbers</title>
+</head>
+<body>
+    <h2>Addition of Natural Numbers</h2>
+  
+    <input type="number" id="no" value="" placeholder="Enter any number">
+    
+    <button type="button" onclick="add()">Answer</button>
+    <p id="result"></p>
+    </form>
+</body>
+<script>
+function add(){
+    var i, sum=0;
+    var no= document.getElementById('no').value;
+
+    for(i=1;i<=no;i++){
+        sum+=i;
+    }
+    document.getElementById('result').innerHTML = "The sum of natural numbers: " +sum;
+}
+</script>
+</html>

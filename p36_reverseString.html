@@ -1,0 +1,26 @@
+<!--JavaScript Program to Reverse a String-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Reverse a String</title>
+</head>
+<body>
+    <h2>Reverse a String</h2>
+    <input type="text" id="st" value="" placeholder="Enter a string:">
+    <button type="button" onclick="revert()">Reverse String</button> 
+    <br>
+    <p id="result"></p>
+</body>
+<script>
+    function revert(){
+        var st;
+        st= document.getElementById('st').value;
+        const arrayStrings = st.split("");
+        const reverseArray = arrayStrings.reverse();
+        const joinArray = reverseArray.join("");
+
+        document.getElementById('result').innerHTML ="Reverse string is " +"<b>" +joinArray +"</b>";
+    }
+ 
+</script>
+</html>

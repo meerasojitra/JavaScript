@@ -1,0 +1,20 @@
+<!-- conversion  Hours in to seconds -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Conversion Hrs into second</title>
+</head>
+<body>
+    <p>Convert Hrs into Second</p>
+    <input type="text" id="hr" value="" placeholder="Enter Hours">
+    <button type="button"  id="second" onclick="secondTime()"> Change Time Into Second</button>
+</body>
+<script>
+    function secondTime(){
+        document.getElementById('second').innerHTML = parseInt(document.getElementById('hr').value)*60*60;
+    }
+</script>
+
+
+</html>

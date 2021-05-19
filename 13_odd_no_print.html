@@ -1,0 +1,29 @@
+<!--print Odd no where n user input-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>odd no</title>
+</head>
+<body>
+    <h2>Print Odd no where n is user Inpur value</h2>
+    <form>
+        <input type="number" id="n" value="" placeholder="Enter n value" />
+        <input type="button" onclick="printOddNos()" value="Print Odd Numbers" />
+        <div id="result"></div>
+    </form>
+</body>
+<script>
+   
+function printOddNos(){
+    var n = parseInt(document.getElementById("n").value);
+    var oddNo = "<br>Odd Numbers:<br>";
+        for(var i=1;i<=n;i++){
+            if(i % 2 == 1){
+            oddNo += i + "<br>";
+          }
+          document.getElementById("result").innerHTML = oddNo;
+    }
+}
+</script>
+</html>

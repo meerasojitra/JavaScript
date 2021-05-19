@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript--time</title>
+    <style>
+        p::-moz-selection{
+            background: #8bc34a;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <button type="button"  id="time" onclick="displayTime()">Time</button>
+    <br/>
+    <br/>
+    <br/>
+   
+    <input type="text" id="fname" value="" placeholder="Enter Your First Name">
+    <input type="text" id="lname" value="" placeholder="Enter Your Lirst Name"><br/>
+    <button type="button" id="submit" onclick="displayname()">My Full Name</button>
+ 
+    <br/>
+    <br/>
+    <br/>
+    <p>Multplication</p>
+    <input type="text" id="a" value="" placeholder="Enter a">
+    <input type="text" id="b" value="" placeholder="Enter b">
+    <input type="text" id="c" value="" placeholder="Enter c">
+    <button type="button" id="mult" onclick="multiplication()">Answer</button>
+
+</body>
+<script>
+    function displayTime(){
+        document.getElementById('time').innerHTML =Date();
+    }
+
+
+    function displayname(){	
+    	document.getElementById('submit').innerHTML = document.getElementById('fname').value + document.getElementById('lname').value;
+    }	
+
+
+    function multiplication(){
+        document.getElementById('mult').innerHTML = parseInt(document.getElementById('a').value) * parseInt(document.getElementById('b').value) * parseInt(document.getElementById('c').value);
+    }
+</script>
+</html>

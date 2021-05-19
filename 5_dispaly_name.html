@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="fname" value="" placeholder="Enter Your First Name">
+    <input type="text" id="lname" value="" placeholder="Enter Your Lirst Name"><br/><br/>
+    <button type="button" onclick="displayname()">My Full Name</button>
+    <p id="name"></p>
+</body>
+<script>
+    function displayname(){	
+        document.getElementById('name').innerHTML = document.getElementById('fname').value + document.getElementById('lname').value;
+    }	
+</script>
+</html>

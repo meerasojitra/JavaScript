@@ -1,0 +1,68 @@
+<!--JavaScript Program to Swap Two Variables-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Swap Value</title>
+</head>
+<body>
+    <h2>Swap Value</h2>
+    
+        <input type="number" id="a" placeholder="Enter value of a">
+        <input type="number" id="b" placeholder="Enter value of b"><br/><br/>
+
+        <button onclick="swap()">Swap</button></br></br>
+        <button onclick="swap2()">Swap2</button></br></br>
+        <button onclick="swap3()">Swap3</button></br></br>
+
+
+        New value of <strong>a</strong> is: <input id="answer1"></br></br>
+        New value of <strong>b</strong>  is: <input id="answer2">
+    
+</body>
+<script>
+     function swap(){
+        var a,b, temp;
+         a = document.getElementById('a').value;
+         b = document.getElementById('b').value;
+
+            temp=a;
+            a=b;
+            b=temp;
+
+        console.log(a);
+        console.log(b);
+
+        document.getElementById("answer1").value= a;
+        document.getElementById("answer2").value= b;
+    }
+//logic 2 -Using Arithmetic Operators
+function swap2(){
+        var c,d;
+         c = parseInt(document.getElementById('a').value);
+         d = parseInt(document.getElementById('b').value);
+
+        c = c + d;
+        console.log(c);
+        d = c - d;
+        console.log(d);
+        c = c - d;
+        console.log(c);
+
+        document.getElementById("answer1").value= c;
+        document.getElementById("answer2").value= d;    
+}
+//logic 3 - Using Arithmetic Operators
+function swap3(){
+    var x,y;
+    x = parseInt(document.getElementById('a').value);
+    y = parseInt(document.getElementById('b').value);
+
+    [x,y] = [y,x];
+
+    document.getElementById("answer1").value= x;
+    document.getElementById("answer2").value= y;    
+}
+
+</script>
+</html>

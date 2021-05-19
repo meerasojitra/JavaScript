@@ -1,0 +1,23 @@
+<!--Javascript Program to Convert Celsius to Fahrenheit-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Celsius to Fahrenheit</title>
+</head>
+<body>
+    <h2>Convert Celsius to Fahrenheit</h2>
+    <input type="number" id="cel" placeholder="Enter a celsius value">
+    <button onclick="fahrenHeit()">Convert into Fahrenheit</button></br></br>
+    <p id="result"></p>
+    
+</body>
+<script>
+    function fahrenHeit(){
+    var cel, fahrenheit;
+    cel = document.getElementById('cel').value;
+    fahrenheit = (cel * 1.8) + 32;
+    document.getElementById('result').innerHTML = +cel + '&nbsp;'+ 'degree celsius is equal to' +'&nbsp;'+'<strong>'+ fahrenheit +'</strong>'+'&nbsp;'+'degree fahrenheit.';
+    }
+</script>
+</html>

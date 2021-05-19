@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Font size----javascript</title>
+    <style>
+        h2{
+            text-align: center;
+        }
+        #content{
+            font-size: 16px;
+            color:darkblue;
+        
+        }
+        .btn{
+            position: fixed;
+            top:0;
+            margin: 0;
+        }
+        .mode{
+            top:0;
+            margin-top: 0px;
+            margin-left: 1080px;
+            position: fixed;
+        }
+     
+    </style>
+</head>
+<body id="content">
+    <h2>INDIA</h2>
+    <p>India, officially the Republic of India, is a country in South Asia. It is the second-most populous country, the seventh-largest country by land area, and the most populous democracy in the world</p>
+    <p><strong>President:</strong> Ram Nath Kovind</p>
+    <p>India (Hindi: Bhārat), officially the Republic of India (Hindi: Bhārat Gaṇarājya),[23] is a country in South Asia. It is the second-most populous country, the seventh-largest country by land area, and the most populous democracy in the world. Bounded by the Indian Ocean on the south, the Arabian Sea on the southwest, and the Bay of Bengal on the southeast, it shares land borders with Pakistan to the west;[f] China, Nepal, and Bhutan to the north; and Bangladesh and Myanmar to the east. In the Indian Ocean, India is in the vicinity of Sri Lanka and the Maldives; its Andaman and Nicobar Islands share a maritime border with Thailand and Indonesia</p>
+    <p><strong>Native languages:</strong> 447 languages</p>  
+    <div class="btn">  
+    <button type="button"  onclick="increase()">+</button>
+    <button type="button" onclick="decrease()">-</button>
+    </div>
+    <br/>
+    <br/>
+    <button type="button"  onclick="plus()">+</button>
+    <button type="button" onclick="minus()">-</button>
+    <br/>
+    <br/>
+    <button type="button"  onclick="darkTheme()">Dark Mode</button>
+    <button type="button"  onclick="lightTheme()">Light Mode</button>
+    </br>
+    </br>
+    <div class="mode">
+    <button type="button"  id ="switch" onclick="switch_theme()">Dark Mode</button>
+    </div>
+
+</body>
+<script>
+    function increase(){
+        document.getElementById('content').style.fontSize='35px';
+    }
+
+    function decrease(){
+        document.getElementById('content').style.fontSize='12px';
+    }
+
+    function plus(){
+        
+    }
+    function minus(){
+        
+    }
+
+    function darkTheme(){
+        document.getElementById('content').style.backgroundColor="black";
+        document.getElementById('content').style.color="White";
+    }
+
+    function lightTheme(){
+        document.getElementById('content').style.backgroundColor="White";
+        document.getElementById('content').style.color="black";
+    }
+    function switch_theme() {
+        var state = document.getElementById('switch').innerHTML;
+        if(state == "Dark Mode"){
+        document.getElementById('content').style.backgroundColor="black";
+        document.getElementById('content').style.color="White";
+        document.getElementById('switch').innerHTML = "Light Mode";
+            
+        }
+        else{
+        document.getElementById('content').style.backgroundColor="white";
+        document.getElementById('content').style.color="blue";
+        document.getElementById('switch').innerHTML = "Dark Mode";
+        }
+    }
+</script>
+</html>

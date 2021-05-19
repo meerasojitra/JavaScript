@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <title>Document</title>
+</head>
+<body>
+    <h2>Student detail</h2>
+  <!--  <input type="button" value="student Detail" onclick="studentDetail()"/>-->
+    <div id="data" style="display: none;">
+    <table border="1">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>
+                Action
+            </th>
+        </tr>
+    </thead>
+    <tbody id ="s_data">
+
+    </tbody>
+
+</table>
+    </div>
+    
+</body>
+<script>
+    function studentDetail(){
+        var student =[];
+        student[0]= ["Meera" ,26, "Female "];
+        student[1]= ["Riya" ,22, "Female"];
+        student[2]= ["Arjun" ,20, "Male"];
+        student[3]= ["Hardik" ,24, "Male"];
+        document.getElementById("data").style.display = "block";
+
+        var student_record ="";
+        for(var i= 0; i<=student.length-1;i++){
+            student_record += "<tr>";
+                for(var j =0; j<=student[i].length-1;j++){
+                    student_record +="<td>";
+                    student_record += student[i][j];
+                    student_record += "</td>";
+                }
+                student_record +="<td> Delete</td>";
+                student_record +="</tr>"
+
+        }
+        console.log(student_record);
+        document.getElementById("s_data").innerHTML += student_record;
+        }
+        studentDetail()
+
+</script>
+</html>

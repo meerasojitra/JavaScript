@@ -1,0 +1,24 @@
+<!--JavaScript Program to Convert Kilometers to Miles-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Convert Kilometers to Miles</title>
+</head>
+<body>
+    <h2>Convert Kilometers to Miles</h2>
+    <input type="number" id="km" placeholder="Enter value of Kilometers">
+    <button onclick="miles()">Convert into miles</button></br></br>
+    <p id="mile"></p>
+    
+</body>
+<script>
+    function miles(){
+        var km, miles;
+        var diff = 0.621371;
+        km = document.getElementById('km').value;
+        miles = km * diff;
+        document.getElementById('mile').innerHTML = +km + '&nbsp;'+ 'kilometers is equal to' +'&nbsp;'+'<strong>'+ miles +'</strong>';
+    }
+</script>
+</html>

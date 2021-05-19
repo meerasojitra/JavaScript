@@ -1,0 +1,35 @@
+<!--JavaScript Program to Find HCF or GCD-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HCF or GCD</title>
+</head>
+<body>
+<h2>HCF or GCD</h2>
+  
+    <input type="number" id="no1" value="" placeholder="Enter first number">
+    <input type="number" id="no2" value="" placeholder="Enter second number">
+ 
+    <button type="button" onclick="hcf()">HCF</button>
+    <p id="result"></p>
+    </form>
+</body>
+<script>
+function hcf(){
+    var no1, no2,i;
+   
+    no1= document.getElementById('no1').value;
+    no2= document.getElementById('no2').value;
+  
+    for (i = 1; i <= no1 && i <= no2; i++) {
+        if( no1 % i == 0 && no2 % i == 0) {
+            hcf = i;
+        }
+    }
+  
+    document.getElementById('result').innerHTML = 'HCF of '+no1 + ' and '+ no2 +'is: ' +hcf;
+    }
+
+</script>
+</html>

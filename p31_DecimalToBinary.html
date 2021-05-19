@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Decimal To Binary</title>
+</head>
+<body>
+    <h2>Decimal To Binary</h2>
+    <input type="number" id="no1" value="" placeholder="Enter decimal number:">
+    <button type="button" onclick="convert()">Decimal To Binary</button> 
+    <br>
+    <p id="r1"></p>
+</body>
+<script>
+    function convert(){
+        var no;
+        no= document.getElementById('no1').value;
+        const result = no.toString(2);
+        console.log('Binary:' + ' ' + result);
+        document.getElementById('r1').innerHTML = "The ASCII value is: " +result;
+    }
+ </script>
+</html>

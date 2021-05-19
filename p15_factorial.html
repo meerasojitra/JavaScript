@@ -1,0 +1,36 @@
+<!--JavaScript Program to Find the Factorial of a Number-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Factorial Number</title>
+</head>
+<body>
+    <h2>Factorial</h2>
+    <input type="number" id ="a" placeholder="Enter any no">
+    <button type="button" id="fact" onclick="factorialNo()">get factorial value</button>
+    <p id="result"></p>
+</body>
+
+<script>
+    
+    function factorialNo(){
+        var ans, fact =1;
+
+    var no= parseInt(document.getElementById('a').value);
+    if(no<0){
+        document.getElementById('result').innerHTML= +no +" is negative number. And Factorial for negative value does not exist." 
+    }
+    else if(no==0){
+        document.getElementById('result').innerHTML= +no +" The factorial of " +no +" is 1." 
+    }
+    else{
+        for(var i=1;i<=no;i++){
+          //ans = fact * i;
+          fact *= i;
+         console.log('ans');
+        }
+        document.getElementById('result').innerHTML= " The factorial of "+ no +"is: " +fact ;
+    }
+}
+</script>
+</html>
